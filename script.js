@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
             if (target === 'home') {
-                window.location.href = 'main.html';
+                window.location.href = 'index.html';
                 return;
             }
             

@@ -272,7 +272,7 @@ isContactPage() {
           this.handleInPageNavigation(target);
           return;
         }
-        const url = target === 'home' ? 'main.html' : target + '.html';
+        const url = target === 'home' ? 'index.html' : target + '.html';
         this.handlePageNavigation(url);
       });
     });
@@ -287,15 +287,15 @@ isContactPage() {
 
   isHomePage() {
     const path = window.location.pathname;
-    return path === '/' || path.includes('main.html') || path.includes('index.html');
+    return path === '/' || path.includes('index.html') || path.includes('index.html');
   }
 
   isSamePage(url) {
     const currentPath = window.location.pathname.toLowerCase();
     const targetPath = new URL(url, window.location.origin).pathname.toLowerCase();
     return currentPath === targetPath ||
-      (currentPath.includes('main.html') && url.includes('main.html')) ||
-      (currentPath === '/' && url.includes('main.html'));
+      (currentPath.includes('index.html') && url.includes('index.html')) ||
+      (currentPath === '/' && url.includes('index.html'));
   }
 
   getEffectiveMbps() {

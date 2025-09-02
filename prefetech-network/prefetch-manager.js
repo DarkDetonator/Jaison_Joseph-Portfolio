@@ -40,7 +40,7 @@ class PrefetchManager {
 
     isMainPage() {
         const path = window.location.pathname;
-        return path === '/' || path.includes('main.html') || path.includes('index.html');
+        return path === '/' || path.includes('index.html') || path.includes('index.html');
     }
 
     async prefetchPage(page) {
