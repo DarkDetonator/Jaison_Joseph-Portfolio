@@ -1,0 +1,78 @@
+{
+  "regional-sales": {
+    "title": "Football Match Analysis - Computer Vision",
+    "category": "ml",
+    "github": "https://github.com/DarkDetonator/Football_Player_Analysis",
+    "slides": [
+      {
+        "image": "projects/Football_CV/CV_pitch.webp",
+        "description": "Real-time football match analysis with multi-object detection & tracking. Identifies and tracks players, referees, ball, and goalposts using state-of-the-art YOLO models for comprehensive match monitoring and analysis."
+      },
+      {
+        "image": "projects/Football_CV/PITCH_tracking.webp",
+        "description": "Team classification system with automated jersey color analysis and tactical pitch projection. Maps real-world player positions onto tactical pitch views for strategic analysis and team formation visualization."
+      },
+      {
+        "image": "projects/Football_CV/CV_heatmap.png",
+        "description": "Motion heatmap generation and real-time visualization system. Creates density-based heatmaps showing player movement patterns with dual-view display featuring main frame and tactical overlay for enhanced match insights."
+      }
+    ]
+  },
+  "rfm-clustering": {
+    "title": "Stock Market Recommendation & Sentiment Analysis",
+    "category": "analytics",
+    "github": "https://github.com/DarkDetonator/Stock_Market_Recommendation",
+    "slides": [
+      {
+        "image": "projects/stocks_predication/stocks_home.webp",
+        "description": "Provides financial data, predictions, and news sentiment for NIFTY 50 companies. Users can query for company insights, view recommendations, and analyze market trends. Integrates real-time data, predictive analytics, and news scraping for actionable investment decisions."
+      },
+      {
+        "image": "projects/stocks_predication/stocks_prediciton_page.webp",
+        "description": "Built with Python Flask for backend REST APIs. Uses Pandas, NumPy for data processing and analysis. MongoDB for storing predictions and scraped news. Plotly for interactive financial and recommendation graphs. Implements user authentication and session management."
+      },
+      {
+        "image": "projects/stocks_predication/stocks_stock.webp",
+        "description": "Sentiment analysis on financial news using NLP. Predictive modeling for stock growth and recommendations (XGBoost, custom models). Frontend integration via CORS for seamless user experience. Modular codebase with separate modules for data fetching, prediction, scraping, and authentication."
+      }
+    ]
+  },
+  "credit-risk": {
+    "title": "Child-Friendly and Visually Accessible AI Chatbot",
+    "category": "bi",
+    "github": "https://github.com/DarkDetonator/In_House_project",
+    "slides": [
+      {
+        "image": "projects/visual_impaired/VI_home.webp",
+        "description": "The app provides a friendly chatbot interface for children, accessible via web browser. Users can interact using text input or voice commands, making it engaging and accessible."
+      },
+      {
+        "image": "projects/visual_impaired/VI_Chatbot.webp",
+        "description": "HTML, CSS, and JavaScript handle user input, display chat messages, and manage voice recognition (SpeechRecognition API). Backend: Flask server processes requests, connects to Gemini (Google Generative AI) via REST API, and returns generated responses."
+      },
+      {
+        "image": "projects/visual_impaired/VI_module.webp",
+        "description": "Voice Recognition: Captures spoken commands, cleans and sends them to the backend. AI Integration: Uses Gemini's LLM to generate child-friendly answers and examples. Robust error handling ensures users receive feedback to maintain a smooth experience."
+      }
+    ]
+  },
+  "ocr-project": {
+    "title": "MRI Sequence Classifier (T1, T2, FLAIR)",
+    "category": "analytics",
+    "github": "https://github.com/DarkDetonator/MRI-class",
+    "slides": [
+      {
+        "image": "projects/mri/3119883_orig.jpg",
+        "description": "This project classifies MRI scans into T1, T2, and FLAIR sequences using a deep learning model. It handles medical DICOM files, automates classification, and organizes results for easy retrieval."
+      },
+      {
+        "image": "projects/mri/flair_mri.jpeg",
+        "description": "The pipeline includes DICOM file reading, image preprocessing (normalization, resizing), and CNN model training with TensorFlow/Keras. Classified scans and metadata are stored securely in a PostgreSQL database using psycopg2."
+      },
+      {
+        "image": "projects/mri/t2_mri.jpeg",
+        "description": "Advanced features include robust DICOM pixel extraction, visualization with matplotlib, automated data workflows, and modular code for easy customization. Enables scalable storage and retrieval frameworks for MRI datasets."
+      }
+    ]
+  }
+}

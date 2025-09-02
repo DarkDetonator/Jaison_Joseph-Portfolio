@@ -1,0 +1,372 @@
+/* ==============================
+MASTER NAVBAR STYLES - SHARED ACROSS ALL PAGES
+Include this in all HTML files BEFORE page-specific CSS
+============================== */
+
+/* ===== DESKTOP NAVBAR (Default) ===== */
+.navbar {
+    background: rgba(11, 1, 61, 0.667) !important;
+    border-bottom: 0.5px solid #3498db;
+    padding: 1.2rem 0 !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: border-bottom-color 0.3s ease;
+    width: 100%;
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2.5rem !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-profile-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem !important;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.logo-profile-img {
+    width: 50px !important;
+    height: 50px !important;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #3498db;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+    background: #000000;
+}
+
+.profile-name {
+    font-size: 1.2rem !important;
+    font-weight: 600 !important;
+    color: #E6ECF5;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem !important;
+    align-items: center;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.8rem !important;
+    padding: 0.8rem 1.5rem !important;
+    border-radius: 8px;
+    transition: all 0.3s;
+    position: relative;
+    border: 1px solid transparent;
+}
+
+/* Profile Card - Desktop */
+.profile-card {
+    position: absolute;
+    top: 60px !important;
+    left: 0;
+    width: 320px;
+    background: rgba(11, 18, 32, 0.95);
+    color: #E6ECF5;
+    border-radius: 12px;
+    border: 1px solid rgba(52, 152, 219, 0.3);
+    box-shadow: 0 15px 35px rgba(0,0,0,.3);
+    padding: 1.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .25s;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translateY(-10px);
+    backdrop-filter: blur(10px);
+}
+
+/* ===== TABLET NAVBAR (1024px and below) ===== */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 0.7rem 0 !important;
+    }
+    
+    .nav-container {
+        padding: 0 1.5rem !important;
+    }
+    
+    .logo-profile-img {
+        width: 42px !important;
+        height: 42px !important;
+    }
+    
+    .profile-name {
+        font-size: 1rem !important;
+    }
+    
+    .nav-link {
+        padding: 0.5rem 1rem !important;
+        font-size: 0.8rem !important;
+    }
+    
+    .profile-card {
+        top: 65px !important;
+        left: 50% !important;
+        transform: translateX(-50%) translateY(-10px) !important;
+        max-width: calc(100vw - 2rem) !important;
+    }
+    
+    .logo-profile-container:hover .profile-card {
+        transform: translateX(-50%) translateY(0) !important;
+    }
+}
+
+/* ===== MOBILE NAVBAR (768px and below) ===== */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.4rem 0 !important;
+    }
+    
+    .nav-container {
+        gap: 0.3rem !important;
+        padding: 0.4rem 1rem !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    
+    .logo-profile-container {
+        order: 1;
+        gap: 0.6rem !important;
+    }
+    
+    .logo-profile-img {
+        width: 30px !important;
+        height: 30px !important;
+        border-width: 1.5px !important;
+    }
+    
+    .profile-name {
+        font-size: 0.85rem !important;
+    }
+    
+    .nav-links {
+        order: 2;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.4rem !important;
+    }
+    
+    .nav-link {
+        padding: 0.3rem 0.6rem !important;
+        font-size: 0.7rem !important;
+        border-radius: 5px !important;
+        min-width: 70px !important;
+        text-align: center !important;
+    }
+    
+    .profile-card {
+        top: 70px !important;
+        width: 300px !important;
+        max-width: calc(100vw - 1.5rem) !important;
+        padding: 1.2rem !important;
+        border-radius: 10px !important;
+    }
+}
+
+/* ===== SMALL MOBILE NAVBAR (480px and below) ===== */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0.3rem 0 !important;
+    }
+    
+    .nav-container {
+        gap: 0.2rem !important;
+        padding: 0.3rem 0.5rem !important;
+    }
+    
+    .logo-profile-container {
+        gap: 0.4rem !important;
+    }
+    
+    .logo-profile-img {
+        width: 25px !important;
+        height: 25px !important;
+        border-width: 1px !important;
+    }
+    
+    .profile-name {
+        font-size: 0.75rem !important;
+    }
+    
+    .nav-links {
+        gap: 0.3rem !important;
+    }
+    
+    .nav-link {
+        padding: 0.25rem 0.5rem !important;
+        font-size: 0.65rem !important;
+        border-radius: 4px !important;
+        min-width: 60px !important;
+    }
+    
+    .profile-card {
+        top: 60px !important;
+        width: 280px !important;
+        max-width: calc(100vw - 1rem) !important;
+        padding: 1rem !important;
+        border-radius: 8px !important;
+    }
+}
+
+/* ===== ULTRA MOBILE NAVBAR (360px and below) ===== */
+@media (max-width: 360px) {
+    .navbar {
+        padding: 0.25rem 0 !important;
+    }
+    
+    .nav-container {
+        gap: 0.15rem !important;
+        padding: 0.25rem 0.4rem !important;
+    }
+    
+    .logo-profile-container {
+        gap: 0.3rem !important;
+    }
+    
+    .logo-profile-img {
+        width: 22px !important;
+        height: 22px !important;
+        border-width: 1px !important;
+    }
+    
+    .profile-name {
+        font-size: 0.7rem !important;
+    }
+    
+    .nav-links {
+        gap: 0.25rem !important;
+    }
+    
+    .nav-link {
+        padding: 0.2rem 0.4rem !important;
+        font-size: 0.6rem !important;
+        border-radius: 3px !important;
+        min-width: 50px !important;
+    }
+    
+    .profile-card {
+        top: 55px !important;
+        width: 260px !important;
+        max-width: calc(100vw - 0.8rem) !important;
+        padding: 0.8rem !important;
+        border-radius: 6px !important;
+    }
+}
+
+/* ===== PROFILE CARD SHARED STYLES ===== */
+.logo-profile-container:hover .profile-card {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+}
+
+.profile-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.profile-card-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #3498db;
+}
+
+.profile-card-info h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #E6ECF5;
+    font-weight: 600;
+}
+
+.job-title {
+    color: #3498db;
+    font-size: 0.9rem;
+    margin: 0;
+    margin-top: 0.2rem;
+}
+
+.profile-card-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.profile-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0.4rem 0;
+}
+
+.detail-label {
+    font-weight: 600;
+    color: #4da3ff;
+    font-size: 0.85rem;
+    min-width: 70px;
+    text-align: left;
+}
+
+.detail-value {
+    color: #E6ECF5;
+    font-size: 0.85rem;
+    text-align: right;
+    flex: 1;
+    margin-left: 1rem;
+}
+
+.detail-value-avl {
+    color: #27ae60;
+    font-size: 0.85rem;
+    text-align: right;
+    flex: 1;
+    margin-left: 1rem;
+}
+
+/* ===== HOVER STATES ===== */
+.logo-profile-img:hover {
+    border-color: #5dade2;
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.4);
+    transform: scale(1.06);
+}
+
+.profile-name:hover {
+    color: #3498db;
+}
+
+.nav-link:hover {
+    color: #3498db;
+    background: rgb(255, 255, 255);
+    border-color: rgba(52, 152, 219, 0.3);
+    transform: translateY(-1px);
+}
+
+.nav-link.active {
+    color: #000000;
+    background: rgb(255, 255, 255);
+    border-color: #3498db;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+}

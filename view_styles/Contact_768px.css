@@ -1,0 +1,200 @@
+/* ==============================
+COMPLETE RESPONSIVE CSS - 768px and below
+============================== */
+
+@media (max-width: 768px) {
+    /* General mobile fixes */
+    body {
+        overflow-x: hidden !important;
+        width: 100vw !important;
+        max-width: 100% !important;
+        font-size: 14px !important;
+    }
+
+    html {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+    }
+
+    /* ===== NAVBAR MOBILE - EXACT COPY FROM MAIN_768px.css ===== */
+    .navbar {
+        padding: 0.4rem 0 !important;
+    background: rgba(0, 2, 19, 0.604);
+        border-bottom: 0.5px solid #3498db;
+    }
+
+    .nav-container {
+        gap: 0.3rem !important;
+        padding: 0.4rem 1rem !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        max-width: 100% !important;
+    }
+
+    .logo-profile-container {
+        order: 1;
+        margin-bottom: 0 !important;
+        gap: 0.6rem !important;
+    }
+
+    .logo-profile-img {
+        width: 30px !important;
+        height: 30px !important;
+        border-width: 1.5px !important;
+    }
+
+    .profile-name {
+        font-size: 0.85rem !important;
+        font-weight: 500 !important;
+    }
+
+    .nav-links {
+        order: 2;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.4rem !important;
+    }
+
+    .nav-link {
+        padding: 0.3rem 0.6rem !important;
+        font-size: 0.7rem !important;
+        border-radius: 5px !important;
+        min-width: 70px !important;
+        text-align: center !important;
+    }
+
+    /* ===== PROFILE CARD MOBILE - EXACT COPY FROM MAIN_768px.css ===== */
+    .profile-card {
+        top: 60px !important;
+        width: 300px !important;
+        max-width: calc(100vw - 1.5rem) !important;
+        padding: 1.2rem !important;
+        left: 50% !important;
+        transform: translateX(-50%) translateY(-10px) !important;
+        border-radius: 10px !important;
+    }
+
+    .logo-profile-container:hover .profile-card {
+        transform: translateX(-50%) translateY(0) !important;
+    }
+
+    .profile-card-header {
+        gap: 0.7rem !important;
+        margin-bottom: 0.8rem !important;
+        padding-bottom: 0.8rem !important;
+        flex-direction: row !important;
+        text-align: left !important;
+    }
+
+    .profile-card-img {
+        width: 45px !important;
+        height: 45px !important;
+    }
+
+    .profile-card-info {
+        text-align: left !important;
+    }
+
+    .profile-card-info h3 {
+        font-size: 0.95rem !important;
+        margin-bottom: 0.2rem !important;
+    }
+
+    .job-title {
+        font-size: 0.8rem !important;
+        margin-top: 0.1rem !important;
+    }
+
+    .profile-card-details {
+        gap: 0.5rem !important;
+    }
+
+    .profile-detail {
+        padding: 0.3rem 0 !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+    }
+
+    .detail-label {
+        font-size: 0.75rem !important;
+        min-width: 60px !important;
+        color: #4da3ff !important;
+        font-weight: 600 !important;
+    }
+
+    .detail-value,
+    .detail-value-avl {
+        font-size: 0.75rem !important;
+        margin-left: 0 !important;
+        text-align: right !important;
+    }
+
+    /* CONTACT SPECIFIC STYLES */
+    .contact-hero {
+        margin-top: 70px !important;
+        height: 65vh !important;
+        padding-bottom: 1.5rem !important;
+    }
+
+    .contact-hero-title {
+        font-size: clamp(2.2rem, 6vw, 2.8rem) !important;
+        margin-bottom: 1.5rem !important;
+    }
+
+    .contact-hero-description {
+        font-size: clamp(1rem, 3.5vw, 1.3rem) !important;
+        padding: 0 1.5rem !important;
+    }
+
+    .contact-section {
+        padding: 3rem 1.5rem !important;
+    }
+
+    .contact-form {
+        padding: 1.8rem !important;
+        border-radius: 14px !important;
+    }
+
+    .contact-form h3 {
+        font-size: 1.5rem !important;
+        margin-bottom: 1.8rem !important;
+    }
+
+    .form-group {
+        margin-bottom: 1.3rem !important;
+    }
+
+    .form-group label {
+        font-size: 0.95rem !important;
+        margin-bottom: 0.4rem !important;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 0.75rem 0.9rem !important;
+        font-size: 0.95rem !important;
+        border-radius: 7px !important;
+    }
+
+    .submit-btn {
+        padding: 0.9rem 1.8rem !important;
+        font-size: 0.95rem !important;
+        border-radius: 7px !important;
+    }
+
+    .contact-social {
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        gap: 1.2rem !important;
+        margin: 1.8rem 0 !important;
+        justify-content: center !important;
+    }
+
+    .contact-btn {
+        padding: 0.75rem 1.1rem !important;
+        font-size: 0.95rem !important;
+        min-width: 110px !important;
+    }
+}

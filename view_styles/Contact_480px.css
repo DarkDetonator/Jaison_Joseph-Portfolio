@@ -1,0 +1,228 @@
+/* ==============================
+COMPLETE MOBILE RESPONSIVE CSS - 480px and below
+============================== */
+
+@media (max-width: 480px) {
+    /* General mobile fixes */
+    body {
+        overflow-x: hidden !important;
+        width: 100vw !important;
+        max-width: 100% !important;
+        font-size: 14px !important;
+    }
+
+    html {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+    }
+
+    /* Navbar mobile - EXACT COPY FROM MAIN_480px.css */
+    .navbar {
+        padding: 0.3rem 0 !important;
+    background: rgba(0, 2, 19, 0.604);
+    }
+
+    .nav-container {
+        gap: 0.2rem !important;
+        padding: 0.3rem 0.5rem !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .logo-profile-container {
+        order: 1;
+        margin-bottom: 0 !important;
+        gap: 0.4rem !important;
+    }
+
+    .logo-profile-img {
+        width: 25px !important;
+        height: 25px !important;
+        border-width: 1px !important;
+    }
+
+    .profile-name {
+        font-size: 0.75rem !important;
+        font-weight: 500 !important;
+    }
+
+    .nav-links {
+        order: 2;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.3rem !important;
+    }
+
+    .nav-link {
+        padding: 0.25rem 0.5rem !important;
+        font-size: 0.65rem !important;
+        border-radius: 4px !important;
+        min-width: 60px !important;
+        text-align: center !important;
+    }
+
+    /* Profile card mobile - EXACT COPY FROM MAIN_480px.css */
+    .profile-card {
+        top: 55px !important;
+        width: 280px !important;
+        max-width: calc(100vw - 1rem) !important;
+        padding: 1rem !important;
+        left: 50% !important;
+        transform: translateX(-50%) translateY(-10px) !important;
+        border-radius: 8px !important;
+    }
+
+    .logo-profile-container:hover .profile-card {
+        transform: translateX(-50%) translateY(0) !important;
+    }
+
+    .profile-card-header {
+        gap: 0.6rem !important;
+        margin-bottom: 0.7rem !important;
+        flex-direction: column !important;
+        text-align: center !important;
+        padding-bottom: 0.6rem !important;
+    }
+
+    .profile-card-img {
+        width: 40px !important;
+        height: 40px !important;
+        align-self: center !important;
+    }
+
+    .profile-card-info {
+        text-align: center !important;
+    }
+
+    .profile-card-info h3 {
+        font-size: 0.9rem !important;
+        margin-bottom: 0.2rem !important;
+    }
+
+    .job-title {
+        font-size: 0.75rem !important;
+        margin-top: 0.1rem !important;
+    }
+
+    .profile-card-details {
+        gap: 0.4rem !important;
+    }
+
+    .profile-detail {
+        padding: 0.25rem 0 !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .detail-label {
+        font-size: 0.7rem !important;
+        min-width: auto !important;
+        margin-bottom: 0.1rem !important;
+        color: #4da3ff !important;
+    }
+
+    .detail-value,
+    .detail-value-avl {
+        font-size: 0.7rem !important;
+        margin-left: 0 !important;
+        text-align: center !important;
+    }
+
+    /* CONTACT SPECIFIC STYLES */
+    .contact-hero {
+        margin-top: 55px !important;
+        height: 60vh !important;
+        padding-bottom: 1rem !important;
+    }
+
+    .contact-hero-title {
+        font-size: clamp(1.8rem, 7vw, 2.2rem) !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .contact-hero-description {
+        font-size: clamp(0.9rem, 4vw, 1.1rem) !important;
+        padding: 0 1rem !important;
+    }
+
+    .contact-section {
+        padding: 2rem 1rem !important;
+    }
+
+    .contact-form {
+        padding: 1.5rem !important;
+        border-radius: 12px !important;
+    }
+
+    .contact-form h3 {
+        font-size: 1.3rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+
+    .form-group {
+        margin-bottom: 1.2rem !important;
+    }
+
+    .form-group label {
+        font-size: 0.9rem !important;
+        margin-bottom: 0.4rem !important;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 0.7rem 0.8rem !important;
+        font-size: 0.9rem !important;
+        border-radius: 6px !important;
+    }
+
+    .submit-btn {
+        padding: 0.8rem 1.5rem !important;
+        font-size: 0.9rem !important;
+        border-radius: 6px !important;
+    }
+
+    .contact-social {
+        flex-direction: column !important;
+        gap: 1rem !important;
+        margin: 1.5rem 0 !important;
+    }
+
+    .contact-btn {
+        padding: 0.7rem 1rem !important;
+        font-size: 0.9rem !important;
+        min-width: auto !important;
+    }
+    .scroll-indicator {
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0.7);
+    font-size: 0.8rem;
+    animation: bounce 2s infinite;
+    z-index: 20;
+    transition: opacity 0.4s;
+    opacity: 1;
+    pointer-events: none;
+  }
+  /* Hide pseudo for mobile */
+  .project-hero::after {
+    content: none !important;
+  }
+
+@keyframes bounce {
+  0%,20%,50%,80%,100% { transform: translateX(-50%) translateY(0);}
+  40% { transform: translateX(-50%) translateY(-10px);}
+  60% { transform: translateX(-50%) translateY(-5px);}
+}
+
+
+  /* Hide scroll indicator when in services area */
+  .project-hero.services-active::after {
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+}
