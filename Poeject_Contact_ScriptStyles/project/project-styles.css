@@ -5,6 +5,7 @@
     z-index: 2;
 }
 
+
 .project-hero-title {
     font-size: 3.5rem;
     font-weight: 700;
@@ -61,7 +62,7 @@
 
 .project-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 40px rgba(52, 152, 219, 0.15);
+    box-shadow: 0 12px 40px (52, 152, 219, 0.15);
 }
 
 .project-card-content h3 {
@@ -389,7 +390,7 @@ body .project-hero {
 
 /* Update your existing project-hero-content to accommodate the description */
 .project-hero-content {
-    top:10vh;
+    top:9vh;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -1083,7 +1084,7 @@ html {
 }
 
 .logo-profile-img:hover {
-    border-color: #5dade2;
+    border-color: #717171e3 ;
     box-shadow: 0 0 15px rgba(52, 152, 219, 0.48);
 }
 
@@ -1186,7 +1187,7 @@ html {
     height: 60px;
     object-fit: cover;
     border-radius: 50%;
-    border: 2px solid #3498db;
+    border: 2px solid #717171e3 ;
     
 }
 
@@ -1246,7 +1247,7 @@ html {
 
 .detail-label {
     font-weight: 600;
-    color: #4da3ff;
+    color: #717171e3;
     font-size: 0.85rem;
     min-width: 70px;
     text-align: left;

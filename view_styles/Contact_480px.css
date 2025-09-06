@@ -196,7 +196,7 @@ COMPLETE MOBILE RESPONSIVE CSS - 480px and below
     }
     .scroll-indicator {
     display: block;
-    position: absolute;
+    position: fixed;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
@@ -224,5 +224,20 @@ COMPLETE MOBILE RESPONSIVE CSS - 480px and below
   .project-hero.services-active::after {
     opacity: 0 !important;
     visibility: hidden !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-overlay-content {
+    top: 60px;
+    height: calc(100vh - 120px);
+  }
+  .project-slide-image {
+    flex: 0 0 36%;
+    max-height: 36%;
+  }
+  .project-slide-text, #overlayDescription {
+    font-size: 0.7rem;
+    line-height: 1.5;
   }
 }

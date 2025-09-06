@@ -107,8 +107,8 @@ isContactPage() {
 
     let minimumDisplayTime;
     if (this.isHomePage() && firstVisit) {
-      if (measuredMbps && measuredMbps < 1.5) minimumDisplayTime = 1600;
-      else if (measuredMbps && measuredMbps < 5) minimumDisplayTime = 1400;
+      if (measuredMbps && measuredMbps < 1.5) minimumDisplayTime = 1200;
+      else if (measuredMbps && measuredMbps < 5) minimumDisplayTime = 800;
       else minimumDisplayTime = 1200;
     } else {
       minimumDisplayTime = 800;
@@ -204,7 +204,7 @@ isContactPage() {
 
     setTimeout(() => {
       if (this.isLoading) this.finishMainLoader();
-    }, 3000);
+    }, 1000);
   }
 
   finishMainLoader() {

@@ -130,6 +130,10 @@ p {
     line-height: 1.6;
 }
 
+#slide_subtopic{
+        color: #4da3ff;
+}
+
 /* Consistent list styling */
 ul, ol {
     margin: 0;

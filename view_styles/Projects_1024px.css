@@ -198,13 +198,13 @@ Uses navbar styles from styles.css
 }
 
 .project-hero-title {
-    font-size: clamp(3rem, 5vw, 4rem) !important;
+    font-size: clamp(3rem, 5vw, 4rem);
     margin: 0 0 2rem 0;
     letter-spacing: -0.01em;
 }
 
 .project-hero-description {
-    font-size: clamp(1.3rem, 2.5vw, 1.6rem) !important;
+    font-size: clamp(1.3rem, 2.5vw, 1.6rem) ;
     padding: 0 2rem;
     max-width: 850px;
     line-height: 1.6;
@@ -229,16 +229,16 @@ Uses navbar styles from styles.css
 .service-icon-1,
 .service-icon-2,
 .service-icon-3 {
-    width: 65px !important;
-    height: 65px !important;
+    width: 65px ;
+    height: 65px ;
     margin-bottom: 0.5rem;
 }
 
 .service-icon-1 img,
 .service-icon-2 img,
 .service-icon-3 img {
-    width: 32px !important;
-    height: 32px !important;
+    width: 32px ;
+    height: 32px;
 }
 
 .service-label {

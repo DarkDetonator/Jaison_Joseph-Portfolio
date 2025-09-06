@@ -530,7 +530,6 @@ function updateProjectSlide() {
         const titleText = document.createElement('h2');
         titleText.textContent = project.title;
         titleText.style.margin = '0';
-        titleText.style.fontSize = '1.6rem';
         titleText.style.fontWeight = '700';
         titleText.style.color = '#2c3e50';
         
