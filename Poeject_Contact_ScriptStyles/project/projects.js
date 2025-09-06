@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
       projectData = data;
       preloadAllImages(data);
       initializeProjectCards();
-      console.log('Project data loaded and images preloaded');
     })
     .catch(err => console.error('Failed to load project slides JSON:', err));
 });
@@ -138,7 +137,6 @@ function updateProjectSlide() {
     dot.classList.toggle('active', idx === slideIndex);
   });
 
-  console.log('Updated slide:', currentProjectSlideIndex, 'for project:', currentProject);
 }
 
 // Change slide by direction (+1 or -1)
@@ -224,7 +222,6 @@ function highlightProjectsByService(serviceType, isActive = false) {
 
 // Main initialization UI logic, event handlers, service theming, overlay controls
 document.addEventListener('DOMContentLoaded', function () {
-  console.log('Projects.js loaded with click-to-open functionality');
   const projectCards = document.querySelectorAll('.project-card');
   const overlay = document.getElementById('projectOverlay');
   if (!overlay) {
@@ -458,7 +455,6 @@ function resetServiceTheme() {
 
 // Function to show project overlay
 function showProjectOverlay(projectId) {
-    console.log('Showing overlay for:', projectId);
     currentProject = projectId;
     currentProjectSlideIndex = 1;
     
@@ -488,7 +484,6 @@ function showProjectOverlay(projectId) {
     // Prevent background scrolling
     document.body.style.overflow = 'hidden';
     
-    console.log('Overlay shown successfully');
 }
 
 // Function to hide project overlay
@@ -504,7 +499,6 @@ function hideProjectOverlay() {
     // Restore background scrolling
     document.body.style.overflow = '';
     
-    console.log('Overlay hidden');
 }
 
 // Update slide content
@@ -568,7 +562,6 @@ function updateProjectSlide() {
         dot.classList.toggle('active', index === currentProjectSlideIndex - 1);
     });
 
-    console.log('Updated slide:', currentProjectSlideIndex, 'for project:', currentProject);
 }
 
 
@@ -608,7 +601,6 @@ function currentProjectSlide(slideNumber) {
 
 // Main initialization
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Projects.js loaded with click-to-open functionality');
     
     const projectCards = document.querySelectorAll('.project-card');
     const overlay = document.getElementById('projectOverlay');
@@ -638,7 +630,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (overlayContent) {
         // Close when mouse leaves the CONTENT area
         overlayContent.addEventListener('mouseleave', function() {
-            console.log('Mouse left overlay content - closing');
             overlayTimeout = setTimeout(() => {
                 hideProjectOverlay();
             }, 200);
@@ -646,7 +637,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Keep overlay open when mouse is inside the CONTENT
         overlayContent.addEventListener('mouseenter', function() {
-            console.log('Mouse entered overlay content - keeping open');
             clearTimeout(overlayTimeout);
         });
     }
@@ -654,7 +644,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Close on click outside the CONTENT
     overlay.addEventListener('click', function(e) {
         if (e.target === overlay) {
-            console.log('Clicked outside content - closing');
             hideProjectOverlay();
         }
     });
@@ -662,7 +651,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Close with Escape key
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && overlay.classList.contains('active')) {
-            console.log('Escape key pressed - closing');
             hideProjectOverlay();
         }
     });

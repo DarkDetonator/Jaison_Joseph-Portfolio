@@ -66,7 +66,6 @@ window.NetworkSpeed = (() => {
         window.__netSpeedMbps = mbps;
         localStorage.setItem('lastNetMbps', String(mbps));
         window.dispatchEvent(new CustomEvent('network-speed:ready', { detail: { mbps } }));
-        console.log('Adaptive network speed:', mbps.toFixed(2), 'Mbps');
       }).catch(err => {
         console.warn('Network speed test failed:', err);
       });

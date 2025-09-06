@@ -27,7 +27,6 @@ class PrefetchManager {
         // Only prefetch on main page
         if (!this.isMainPage()) return;
 
-        console.log('🚀 Starting background prefetching...');
         
         for (const page of this.pagesToPrefetch) {
             if (!this.prefetchedPages.has(page.url)) {
@@ -47,11 +46,9 @@ class PrefetchManager {
         try {
             // Check if already cached and fresh
             if (this.isCached(page.url)) {
-                console.log(`✅ ${page.url} already cached`);
                 return;
             }
 
-            console.log(`📥 Prefetching ${page.url}...`);
 
             // Create prefetch link
             const link = document.createElement('link');
@@ -70,7 +67,6 @@ class PrefetchManager {
                 const content = await response.text();
                 this.cacheContent(page.url, content);
                 this.prefetchedPages.add(page.url);
-                console.log(`✅ ${page.url} prefetched and cached`);
 
                 // Prefetch page-specific resources
                 this.prefetchPageResources(content, page.url);
@@ -175,7 +171,6 @@ class PrefetchManager {
     // Clear cache if needed
     clearCache() {
         localStorage.removeItem(this.cacheKey);
-        console.log('🗑️ Prefetch cache cleared');
     }
 }
 
