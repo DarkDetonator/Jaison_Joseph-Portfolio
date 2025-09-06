@@ -4,8 +4,8 @@ class PrefetchManager {
         this.visitedKey = 'portfolio_visited';
         this.cacheExpiry = 24 * 60 * 60 * 1000; // 24 hours
         this.pagesToPrefetch = [
-            { url: '/projects.html', priority: 'high' },
-            { url: '/contact.html', priority: 'medium' }
+            { url: 'projects.html', priority: 'high' },
+            { url: 'contact.html', priority: 'medium' }
         ];
         this.prefetchedPages = new Set();
         this.init();
