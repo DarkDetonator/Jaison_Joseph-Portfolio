@@ -1,3 +1,43 @@
+// Add this at the beginning of script.js
+// SEO: Update page title and meta description based on current section
+function updateSEOForSection(sectionName) {
+    const titles = {
+        'introduction': 'Jaison Joseph - Data Science Engineer | ML & AI Specialist',
+        'experience': 'Professional Experience - Jaison Joseph | Machine Learning Engineer',
+        'skills': 'Technical Skills - Python, ML, Computer Vision | Jaison Joseph',
+        'portfolio': 'Interactive Portfolio - Jaison Joseph | Data Science Projects'
+    };
+    
+    const descriptions = {
+        'introduction': 'Recent CSE graduate specializing in Data Science, Machine Learning, and Computer Vision. Experienced in Python, TensorFlow, and Big Data technologies.',
+        'experience': 'Machine Learning Engineer Intern at Trecent Systems. Expertise in YOLOv8, computer vision, and OCR solutions for traffic analysis.',
+        'skills': 'Technical expertise in Python, SQL, TensorFlow, AWS, Hadoop, Tableau, and advanced ML/AI frameworks.',
+        'portfolio': 'Explore interactive portfolio featuring data science projects, computer vision applications, and technical demonstrations.'
+    };
+    
+    if (titles[sectionName]) {
+        document.title = titles[sectionName];
+        
+        // Update meta description if it exists
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc && descriptions[sectionName]) {
+            metaDesc.content = descriptions[sectionName];
+        }
+    }
+}
+
+// Add this to your existing changeSlides function
+function changeSlides(instant) {
+    // ... your existing code ...
+    
+    // Add SEO update based on current slide
+    const slideNames = ['introduction', 'experience', 'skills', 'portfolio'];
+    if (slideNames[curSlide]) {
+        updateSEOForSection(slideNames[curSlide]);
+    }
+    
+    // ... rest of your existing code ...
+}
 // ==============================// ============================== naviagtion
 document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.nav-link');
@@ -874,7 +914,61 @@ function changeSlides(instant) {
 
 // Add this to your projects.js file - Mobile scroll-based navigation visibility
 
+// Smart Pagination Visibility Control
+function initPaginationControl() {
+    const paginationContainer = document.querySelector('.pagination-container');
+    if (!paginationContainer) return;
 
+    let currentSection = 'hero';
+    
+    // Create intersection observer to detect current section
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+                const target = entry.target;
+                
+                // Check what section we're in
+                if (target.classList.contains('hero-section') || 
+                    target.classList.contains('slider-container') ||
+                    target.closest('.hero-section')) {
+                    currentSection = 'hero';
+                    paginationContainer.classList.remove('hide-pagination');
+                } else if (target.classList.contains('skills-section') ||
+                          target.classList.contains('projects-content') ||
+                          target.classList.contains('contact-content')) {
+                    currentSection = 'other';
+                    paginationContainer.classList.add('hide-pagination');
+                }
+            }
+        });
+    }, {
+        threshold: 0.5,
+        rootMargin: '-50px 0px -50px 0px'
+    });
+
+    // Observe all major sections
+    const sections = document.querySelectorAll('.hero-section, .skills-section, .projects-content, .contact-content, section');
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+
+    // Initial check - show pagination if we start on hero
+    const heroSection = document.querySelector('.hero-section, .slider-container');
+    if (heroSection) {
+        const rect = heroSection.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+            paginationContainer.classList.remove('hide-pagination');
+        } else {
+            paginationContainer.classList.add('hide-pagination');
+        }
+    }
+}
+
+// Initialize pagination control when DOM loads
+document.addEventListener('DOMContentLoaded', () => {
+    // Add delay to ensure other scripts load first
+    setTimeout(initPaginationControl, 500);
+});
 
 
 

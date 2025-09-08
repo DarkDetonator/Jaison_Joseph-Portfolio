@@ -385,7 +385,7 @@
     }
     
     .slide:nth-child(4) .slide__text-heading {
-        font-size: 1.6rem !important;
+        font-size: 1.4rem !important;
         margin-bottom: 1rem !important;
     }
     
@@ -400,17 +400,7 @@
         margin: 0.8rem 0 !important;
     }
     
-    /* Skills organized mobile */
-    
-    
-    /* Buttons mobile */
    
-    
-    
-    
-   
-    
-    /* Pagination mobile */
     
     
     .pagination-header {
@@ -572,11 +562,95 @@
         border-radius: 6px !important;
     }
     .pagination-container {
-    position: absolute !important;
+    position: fixed !important;
     bottom: 2rem !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
     z-index: 1000 !important;
   }
 
+    .pagination-container {
+        bottom: 1rem !important;
+        gap: 0.5rem !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+
+    .pagination-container.hide-pagination {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transition: all 0.3s ease !important;
 }
+
+    .pagination-header {
+        min-width: 160px !important;
+        padding: 0.5rem 0.8rem !important;
+        font-size: 0.7rem !important;
+        border-radius: 8px !important;
+    }
+
+    .pagination-title {
+        font-size: 0.65rem !important;
+        letter-spacing: 0.5px !important;
+    }
+
+    .pagination-counter {
+        font-size: 0.6rem !important;
+        padding: 0.1rem 0.4rem !important;
+        border-radius: 15px !important;
+    }
+
+    .current-slide {
+        font-size: 0.7rem !important;
+    }
+
+    .pagination {
+        gap: 0.6rem !important;
+        padding: 0.6rem 0.8rem !important;
+        border-radius: 15px !important;
+        background: rgba(0, 2, 20, 0.8) !important;
+        border: 1px solid rgba(52, 152, 219, 0.3) !important;
+    }
+
+    .pagination-dot {
+        width: 10px !important;
+        height: 10px !important;
+        border-width: 1px !important;
+    }
+
+    .pagination-dot::before {
+        font-size: 0.6rem !important;
+        padding: 0.3rem 0.5rem !important;
+        border-radius: 4px !important;
+        bottom: calc(100% + 10px) !important;
+    }
+
+    .pagination-dot::after {
+        bottom: calc(100% + 5px) !important;
+        border-width: 4px !important;
+    }
+
+
+/* Hide old pagination elements */
+.slider-pagi {
+    display: none !important;
+}
+
+/* Ensure pagination doesn't interfere with content */
+.skills-section,
+.projects-content,
+.contact-content {
+    padding-bottom: 4rem !important;
+}
+
+
+
+    .skills-section,
+    .projects-content,
+    .contact-content {
+        padding-bottom: 2rem !important;
+    }
+}
+  
+

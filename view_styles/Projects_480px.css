@@ -278,10 +278,13 @@
   }
 .project-slide-text p {
     color: #243650;
-    line-height: 1.6;
-  font-size: clamp(0.9rem, 2.3vh, 2.5rem) !important;
+    line-height: 1.5;
+  font-size: clamp(1rem, 2.1vh, 2.5rem) !important;
     margin-bottom: 1rem;
     text-align: justify;
+}
+.project-slide-text h2{
+  font-size: clamp(1.2rem,2.5vh,2.8rem) !important ;
 }
   .project-slide-nav {
     bottom: 15px !important;
@@ -430,6 +433,7 @@
     transform: translateX(-50%);
     color: rgba(255,255,255,0.7);
     font-size: 0.8rem;
+    font-weight: bold; 
     animation: bounce 2s infinite;
     z-index: 20;
     transition: opacity 0.4s;

@@ -88,6 +88,30 @@
     gap: 0.2rem !important;
     transition: background 0.3s;
   }
+
+  .slide:nth-child(4) .slide__text {
+        max-width: 96% !important;
+        padding: 1rem 0.8rem !important;
+        top: 30% !important;
+        margin-top: 45px !important;
+        margin-bottom: 90px !important;
+    }
+    
+    .slide:nth-child(4) .slide__text-heading {
+        font-size: 1.2rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .slide:nth-child(4) .slide__text-desc {
+        font-size: 0.8rem !important;
+        margin-bottom: 0.8rem !important;
+    }
+    
+    .slide:nth-child(4) .interactive-features {
+        font-size: 0.8rem !important;
+        line-height: 1.5 !important;
+        margin: 0.8rem 0 !important;
+    }
   .skill-row:last-child {
     border-bottom: none !important;
   }
