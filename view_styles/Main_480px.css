@@ -215,7 +215,7 @@
     /* Slide text mobile */
     .slide__text {
         position: absolute !important;
-        top: 45% !important;
+        top: 35% !important;
         left: 2% !important;
         right: 2% !important;
         width: 96% !important;
@@ -379,7 +379,7 @@
     .slide:nth-child(4) .slide__text {
         max-width: 96% !important;
         padding: 1rem 0.8rem !important;
-        top: 40% !important;
+        top: 34% !important;
         margin-top: 45px !important;
         margin-bottom: 90px !important;
     }
@@ -562,15 +562,14 @@
         border-radius: 6px !important;
     }
     .pagination-container {
-    position: fixed !important;
-    bottom: 2rem !important;
+    position: absolute !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
     z-index: 1000 !important;
   }
 
     .pagination-container {
-        bottom: 1rem !important;
+        bottom: clamp(58px, 13vh, 140px) !important;
         gap: 0.5rem !important;
         left: 50% !important;
         transform: translateX(-50%) !important;

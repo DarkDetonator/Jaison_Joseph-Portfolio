@@ -496,6 +496,7 @@ body {
 }
 
 .slider-control {
+    border: transparent;
     z-index: 8;
     position: absolute;
     top: 0;
@@ -1630,6 +1631,9 @@ body {
   stroke: currentColor;
   stroke-width: 1.5;
 }
+
+
+
 
 /* Add this to your Projects_480px.css file */
 
