@@ -723,9 +723,9 @@ body {
     height: auto;
     bottom: auto;
     min-height: 300px;
-    max-height: 75vh;
+    max-height: 80vh;
     min-width: 85%; /* Adjusted width */
-    top: 55%;
+    top: 52%;
     left: 50%;
     transform: translate(-50%, -50%); /* Proper centering */
     z-index: 4;
