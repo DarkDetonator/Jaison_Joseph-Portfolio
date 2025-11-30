@@ -16,7 +16,7 @@ body {
     -ms-text-size-adjust: 100%;
     line-height: 1.6; /* Explicit line-height */
 }
-
+.sr-only{opacity: 0;}
 /* Force consistent backdrop-filter across browsers */
 .navbar,
 .profile-card,
