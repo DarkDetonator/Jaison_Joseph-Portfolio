@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-
-
-<url>
-  <loc>https://darkdetonator.github.io/Jaison_Joseph-Portfolio/</loc>
-  <lastmod>2025-11-30T16:04:19+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://darkdetonator.github.io/Jaison_Joseph-Portfolio/docs/Jaison_Joseph_Resume_10082025_v1.pdf</loc>
-  <lastmod>2025-11-30T16:04:19+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://darkdetonator.github.io/Jaison_Joseph-Portfolio/</loc>
+    <lastmod>2024-12-15T10:30:00+00:00</lastmod>
+    <priority>1.00</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  
+  <url>
+    <loc>https://darkdetonator.github.io/Jaison_Joseph-Portfolio/projects/</loc>
+    <lastmod>2024-12-15T10:30:00+00:00</lastmod>
+    <priority>0.90</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://darkdetonator.github.io/Jaison_Joseph-Portfolio/contact/</loc>
+    <lastmod>2024-11-30T16:04:19+00:00</lastmod>
+    <priority>0.60</priority>
+    <changefreq>yearly</changefreq>
+  </url>
 
 </urlset>
